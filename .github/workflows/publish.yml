@@ -20,9 +20,9 @@ jobs:
     permissions:
       # Écriture : pousser le tag de la version. Un tag poussé par ce jeton ne relance pas ce workflow.
       contents: write
-      packages: write
     env:
-      NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Jeton npmjs (Automation) à déposer dans les secrets du dépôt.
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,7 +30,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          registry-url: https://npm.pkg.github.com
+          registry-url: https://registry.npmjs.org
           scope: '@yoannyviquel'
       # npm 10 bute sur la résolution des dépendances pair à l'installation : npm 11 (npm ci, lui, passe).
       - run: npm install -g npm@11

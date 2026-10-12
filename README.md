@@ -1,8 +1,9 @@
 # Neomorphism design system
 
 Le design system néomorphique de mes apps (Follow, Investment, weather-ahead) : les jetons, le CSS
-et les composants React, avec une page de démonstration. Publié en privé sur GitHub Packages sous
-`@yoannyviquel/neomorphism-design-system`.
+et les composants React, avec une page de démonstration. Publié sur npm sous
+[`@yoannyviquel/neomorphism-design-system`](https://www.npmjs.com/package/@yoannyviquel/neomorphism-design-system),
+en MIT : qui veut s'en servir n'a qu'à l'installer.
 
 ## Principes
 
@@ -235,22 +236,18 @@ et les composants React, avec une page de démonstration. Publié en privé sur 
 
 ## Utiliser le paquet dans une app
 
-1. Un jeton GitHub (classic) avec le droit `read:packages`, dans l'environnement : `NODE_AUTH_TOKEN`.
-2. Un `.npmrc` à la racine de l'app :
+Le paquet est public, sur npmjs : ni jeton ni `.npmrc`, chez soi comme en CI.
 
-   ```
-   @yoannyviquel:registry=https://npm.pkg.github.com
-   //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
-   ```
+```bash
+npm install @yoannyviquel/neomorphism-design-system
+```
 
-3. `npm install @yoannyviquel/neomorphism-design-system`, puis :
+```tsx
+import '@yoannyviquel/neomorphism-design-system/styles.css'
+import { Button, FoldingGrid, ImageButton } from '@yoannyviquel/neomorphism-design-system'
+```
 
-   ```tsx
-   import '@yoannyviquel/neomorphism-design-system/styles.css'
-   import { Button, FoldingGrid, ImageButton } from '@yoannyviquel/neomorphism-design-system'
-   ```
-
-Le build d'une app (Cloudflare, CI) a besoin du même `NODE_AUTH_TOKEN` dans ses variables.
+React 19 est une dépendance pair : c'est l'app qui l'apporte. Licence MIT.
 
 **L'app n'a rien à faire pour la densité** : le DS lit le pointeur. Sur **téléphone**, le rendu est
 **identique au pixel** à celui de la maquette (`pointer: coarse` ⇒ échelle confortable) ; ce qui
@@ -315,7 +312,8 @@ npm version minor    # ou patch, major : met à jour package.json et crée le ta
 git push --follow-tags
 ```
 
-Le workflow « Publier » construit et publie le tag sur GitHub Packages. Il se lance aussi à la main
+Le workflow « Publier » construit et publie le tag sur npmjs, avec le secret `NPM_TOKEN` du dépôt
+(jeton npmjs de type **Automation**, à renouveler à son expiration). Il se lance aussi à la main
 (onglet Actions, « Run workflow ») : il publie alors la version inscrite dans `package.json`, puis
 pose le tag `v<version>` s'il manque. Le champ « commit » vise un commit antérieur ; une version
 déjà publiée n'est pas republiée, seul son tag est posé.
