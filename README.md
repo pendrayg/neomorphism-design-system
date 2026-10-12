@@ -3,7 +3,7 @@
 Le design system néomorphique de mes apps (Follow, Investment, weather-ahead) : les jetons, le CSS
 et les composants React, avec une page de démonstration. Publié sur npm sous
 [`@pendrayg/neomorphism-design-system`](https://www.npmjs.com/package/@pendrayg/neomorphism-design-system),
-en MIT : qui veut s'en servir n'a qu'à l'installer.
+en PolyForm Noncommercial : qui s'en sert pour un projet non commercial n'a qu'à l'installer.
 
 ## Principes
 
@@ -247,7 +247,12 @@ import '@pendrayg/neomorphism-design-system/styles.css'
 import { Button, FoldingGrid, ImageButton } from '@pendrayg/neomorphism-design-system'
 ```
 
-React 19 est une dépendance pair : c'est l'app qui l'apporte. Licence MIT.
+React 19 est une dépendance pair : c'est l'app qui l'apporte.
+
+**Licence : [PolyForm Noncommercial 1.0.0](LICENSE).** Installer, modifier, redistribuer, héberger
+sur son serveur : tout est permis **tant que l'usage n'est pas commercial** — projet personnel,
+étude, association, école, recherche publique, institution. Un usage commercial demande une licence
+séparée : [ouvrir une issue](https://github.com/yoannyviquel/neomorphism-design-system/issues).
 
 **L'app n'a rien à faire pour la densité** : le DS lit le pointeur. Sur **téléphone**, le rendu est
 **identique au pixel** à celui de la maquette (`pointer: coarse` ⇒ échelle confortable) ; ce qui

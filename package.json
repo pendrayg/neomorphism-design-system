@@ -3,7 +3,7 @@
   "version": "0.24.2",
   "description": "Design system néomorphique partagé : jetons, CSS et composants React (Follow, Investment, weather-ahead).",
   "type": "module",
-  "license": "MIT",
+  "license": "PolyForm-Noncommercial-1.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yoannyviquel/neomorphism-design-system.git"
