@@ -2,7 +2,7 @@
 
 Le design system néomorphique de mes apps (Follow, Investment, weather-ahead) : les jetons, le CSS
 et les composants React, avec une page de démonstration. Publié sur npm sous
-[`@yoannyviquel/neomorphism-design-system`](https://www.npmjs.com/package/@yoannyviquel/neomorphism-design-system),
+[`@pendrayg/neomorphism-design-system`](https://www.npmjs.com/package/@pendrayg/neomorphism-design-system),
 en MIT : qui veut s'en servir n'a qu'à l'installer.
 
 ## Principes
@@ -239,12 +239,12 @@ en MIT : qui veut s'en servir n'a qu'à l'installer.
 Le paquet est public, sur npmjs : ni jeton ni `.npmrc`, chez soi comme en CI.
 
 ```bash
-npm install @yoannyviquel/neomorphism-design-system
+npm install @pendrayg/neomorphism-design-system
 ```
 
 ```tsx
-import '@yoannyviquel/neomorphism-design-system/styles.css'
-import { Button, FoldingGrid, ImageButton } from '@yoannyviquel/neomorphism-design-system'
+import '@pendrayg/neomorphism-design-system/styles.css'
+import { Button, FoldingGrid, ImageButton } from '@pendrayg/neomorphism-design-system'
 ```
 
 React 19 est une dépendance pair : c'est l'app qui l'apporte. Licence MIT.
