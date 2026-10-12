@@ -252,7 +252,7 @@ React 19 est une dépendance pair : c'est l'app qui l'apporte.
 **Licence : [PolyForm Noncommercial 1.0.0](LICENSE).** Installer, modifier, redistribuer, héberger
 sur son serveur : tout est permis **tant que l'usage n'est pas commercial** — projet personnel,
 étude, association, école, recherche publique, institution. Un usage commercial demande une licence
-séparée : [ouvrir une issue](https://github.com/yoannyviquel/neomorphism-design-system/issues).
+séparée : [ouvrir une issue](https://github.com/pendrayg/neomorphism-design-system/issues).
 
 **L'app n'a rien à faire pour la densité** : le DS lit le pointeur. Sur **téléphone**, le rendu est
 **identique au pixel** à celui de la maquette (`pointer: coarse` ⇒ échelle confortable) ; ce qui
