@@ -1,5 +1,5 @@
 {
-  "name": "@yoannyviquel/neomorphism-design-system",
+  "name": "@pendrayg/neomorphism-design-system",
   "version": "0.24.2",
   "description": "Design system néomorphique partagé : jetons, CSS et composants React (Follow, Investment, weather-ahead).",
   "type": "module",
