@@ -20,9 +20,8 @@ jobs:
     permissions:
       # Écriture : pousser le tag de la version. Un tag poussé par ce jeton ne relance pas ce workflow.
       contents: write
-    env:
-      # Jeton npmjs (Automation) à déposer dans les secrets du dépôt.
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # L'identité OIDC du workflow, que npmjs reconnaît comme publieur de confiance : aucun jeton.
+      id-token: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -33,6 +32,7 @@ jobs:
           registry-url: https://registry.npmjs.org
           scope: '@pendrayg'
       # npm 10 bute sur la résolution des dépendances pair à l'installation : npm 11 (npm ci, lui, passe).
+      # Le publieur de confiance demande en outre npm >= 11.5.1 et Node >= 22.14.
       - run: npm install -g npm@11
       - id: version
         run: |

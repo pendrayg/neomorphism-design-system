@@ -317,8 +317,10 @@ npm version minor    # ou patch, major : met à jour package.json et crée le ta
 git push --follow-tags
 ```
 
-Le workflow « Publier » construit et publie le tag sur npmjs, avec le secret `NPM_TOKEN` du dépôt
-(jeton npmjs de type **Automation**, à renouveler à son expiration). Il se lance aussi à la main
+Le workflow « Publier » construit et publie le tag sur npmjs **sans aucun jeton** : npmjs reconnaît
+ce dépôt et ce fichier de workflow comme publieur de confiance (*trusted publisher*, OIDC), et
+l'identité d'exécution d'Actions tient lieu de preuve. Un corollaire gratuit : la **provenance** du
+paquet est attestée à chaque publication. Il se lance aussi à la main
 (onglet Actions, « Run workflow ») : il publie alors la version inscrite dans `package.json`, puis
 pose le tag `v<version>` s'il manque. Le champ « commit » vise un commit antérieur ; une version
 déjà publiée n'est pas republiée, seul son tag est posé.
