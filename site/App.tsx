@@ -550,7 +550,7 @@ function Platforms() {
   )
 }
 
-const COLORS = ['--color-bg', '--color-text', '--color-muted', '--color-primary', '--color-danger', '--color-border', '--grad-solar-to', '--grad-fern-to']
+const COLORS = ['--color-bg', '--color-text', '--color-muted', '--color-primary', '--color-danger', '--color-border', '--grad-solar-to', '--grad-pumpkin-to', '--grad-fern-to']
 
 export function App() {
   const [theme, setTheme] = useRootSetting<Theme>('theme', 'ds-theme')

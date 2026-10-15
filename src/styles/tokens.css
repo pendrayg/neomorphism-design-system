@@ -163,6 +163,10 @@
   --grad-blaze-to: #ff2d2d;
   --grad-solar-from: #1a1200;
   --grad-solar-to: #ffc500;
+  /* Orange citrouille : entre le solaire et le rouge, un dépassement qui n'est pas encore une
+     alerte (le budget dépassé, dans Budget). Il tient sur les deux fonds : pas de variante claire. */
+  --grad-pumpkin-from: #1a0a00;
+  --grad-pumpkin-to: #ff7518;
 
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   color: var(--color-text);
